@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style33.css">
+    <title>Employee Details</title>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+    <div id="toprow"></div>
+
+    <div id="resume">
+       <a target="_blank" href="https://drive.google.com/file/d/105xq0qkbQeiyFf9gBNikUrVsX7UkxNrj/view?usp=share_link">
+            Resume
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 10px;" width = "25" viewBox="0 0 384 512" fill = "rgb(120,0,200)">
+                <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/>
+            </svg>
+       </a>
+    </div>
+    
+    <svg id="touchup1" width="683" height="301" viewBox="0 0 683 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.988827 4.37933L339.886 76.978M21.1252 138.65L682.198 292.924M255.892 117.905L516.185 184.731M139.173 252.785L374.217 297.553" stroke="url(#paint0_linear_1_2)" stroke-width="7"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2" x1="653.288" y1="155.821" x2="-96.7232" y2="244.898" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00D66F" stop-opacity="0.7"/>
+        <stop offset="1" stop-color="#5846FF"/>
+        </linearGradient>
+        </defs>
+    </svg>
+
+    <svg id="touchup2" width="608" height="489" viewBox="0 0 608 489" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.08756 433.14L241.971 182.029M128.112 486.082L604.888 2.86023M233.014 275.033L425.927 87.9434M287.093 445.008L448.011 267.933" stroke="url(#paint0_linear_1_2)" stroke-width="7"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2" x1="472.866" y1="-44.0784" x2="157.185" y2="642.068" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00D66F" stop-opacity="0.7"/>
+        <stop offset="1" stop-color="#5846FF"/>
+        </linearGradient>
+        </defs>
+    </svg>
+    <svg id="touchup3" width="280" height="267" viewBox="0 0 280 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M246.701 263.773L103.98 160.042M277.402 210.309L2.81773 3.35766M157.117 164.306L50.8345 80.6069M254.474 141.838L153.806 71.9272" stroke="url(#paint0_linear_1_2)" stroke-width="7"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_2" x1="-24.475" y1="59.8544" x2="319.453" y2="274.267" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00D66F" stop-opacity="0.7"/>
+        <stop offset="1" stop-color="#5846FF"/>
+        </linearGradient>
+        </defs>
+    </svg>
+        
+    <div id="admsect">
+        <a target="_blank" href="Admin.html">Admin Section</a>
+    </div>
+
+    <div id="menu1">
+        <div id="navbar">
+            <div class="nele" id="navnew">Register New Employee</div>
+            <div class="nele" id="navch">Change Details</div>
+            <div class="nele" id="navap">Apply for A Leave</div>
+            <div class="nele" id="navse">Search an Employee</div>
+        </div>
+        <div id="space1">
+            <div id="newinit">
+                <div id="uppergrid">
+                    <input class="newadd" type="text" placeholder="Employee ID" id="newname">
+                    <input class="newadd" type="text" placeholder="Name" id="newempid">
+                </div>
+                <div id="newgrid">
+                    <input class="newadd" id="newdob" type="text" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" placeholder="Date of Birth" max="2000-12-31">
+                    <input class="newadd" id="newemail" type="text" placeholder="Email ID">
+                    <input class="newadd" id="newphone" type="text" placeholder="Phone Number">
+                    <input class="newadd" id="newcurr" type="text" placeholder="Current Address">
+                    <input class="newadd" id="newper" type="text" placeholder="Permanent Address">
+                    <input class="newadd" id="newadh" type="text" placeholder="Aadhaar Card No.">
+                    <input class="newadd" id="newupi" type="text" placeholder="UPI ID">
+                    <input class="newadd" id="newdept" type="text" placeholder="Department">
+                    <input class="newadd" id="newtitle" type="text" placeholder="Job Title">
+                    <input class="newadd" id="newdoj" type="text" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" placeholder="Joining Date" min="2018-01-02">
+                    <input class="newadd" id="newsal" type="text" placeholder="Salary">
+                    <input class="newadd" id="newrkey" type="text" placeholder="Registration Key">
+                    <input class="newadd" id="newlapt" type="text" placeholder="Laptop ID">
+                    <input class="newadd" id="newlevs" type="text" placeholder="Leaves Remaining">
+                    <input class="newadd" id="newgndr" type="text" placeholder="Gender">
+                    <input class="newadd" id="newtm" type="text" placeholder="Team">
+                    <button id="newbtn">Register</button>
+                </div>
+            </div>
+
+            <div id="changeinit">
+                <div id="persinit">
+                    <select name="Personal" id="perslct">
+                        <option value="">Personal</option>
+                        <option value="0">Phone Number</option>
+                        <option value="1">Current Address</option>
+                        <option value="2">Permanent Address </option>
+                        <option value="3">UPI ID</option>
+                    </select>
+                    <input type="text" id="persinp" placeholder="New Value">
+                    <button id="persapp">Apply</button>
+                </div>
+                <div id="orginit">
+                    <select name="Organisational" id="orgslct">
+                        <option value="">Organisational</option>
+                        <option value="0">Department</option>
+                        <option value="1">Job Title</option>
+                        <option value="2">Team</option>
+                        <option value="3">Laptop ID</option>
+                    </select>
+                    <input type="text" id="orginp" placeholder="New Value">
+                    <button id="orgapp">Apply</button>
+                </div>
+            </div>
+            <div id="leavesinit">
+                <div id="reasn">
+                    <span>Reason</span>
+                    <input type="text" id="rinp" placeholder="Reason in Short" style="width: 65%;">
+                </div>
+                <div id="dates">
+                    <span>From</span> <input type="date" name="From" id="fdate">
+                    <span style="margin-left: 40px;">To</span> <input type="date" name="To" id="tdate">
+                </div>
+                <button id="leavapp">Submit</button>
+            </div>
+            <div id="searchinit">
+                <div>
+                    <input type="text" id="srchbox" placeholder="Enter the Name"> 
+                </div>
+                <div id="searchresult">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="approvlv">
+        <div id="lvdisp">
+            <svg id="arrow3" width="33" viewBox="0 0 33 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.39987 42.2543L27.9949 21.6157L1.60527 2.2622" stroke="white" stroke-width="5"/>
+            </svg>
+        </div>
+        <div id="lvapps">
+            <div id="lftarrow">
+                <svg width="27" viewBox="0 0 33 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.7448 2.83641L5.00265 23.2913L31.2531 42.8332" stroke="white" stroke-width="5"/>     
+                </svg>    
+            </div>
+            <div id="rghtarrow">
+                <svg width="23" viewBox="0 0 33 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.39987 42.2543L27.9949 21.6157L1.60527 2.2622" stroke="white" stroke-width="5"/>
+                </svg>
+            </div>
+            <div id="lvapel">
+                
+            </div>
+            <button id="lvapprove">
+                Approve
+            </button>
+        </div>
+    </div>
+    <div id="projs">
+        <div id="projdisp">
+            <svg width="18" style="margin-left: 10px;" id="projarw" viewBox="0 0 33 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.7448 2.83641L5.00265 23.2913L31.2531 42.8332" stroke="white" stroke-width="5"/>     
+            </svg>
+        </div>
+        <div id="projstable">
+
+        </div>
+    </div>
+
+    <div id="empid">
+        <h2> Employee ID: </h2>
+    </div>
+    <svg id="fakeimg"" width="272" height="294" viewBox="0 0 272 294" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="272" height="294" fill="#DADADA"/>
+        <ellipse cx="136" cy="91.5" rx="54" ry="55.5" fill="#959595"/>
+        <path d="M35.5 155.5L6 293L69.5 269H209L267.5 293L243.5 155.5H35.5Z" fill="#959595"/>
+    </svg>
+    
+    <div id="generaldet"></div>
+    <div id="personaldet"> <h2 style="align-self: center;">Personal Details</h2></div>
+    <div id="orgdet"><h2 style="align-self: center;">Company Details</h2></div>
+
+    <div id="chat">
+        <div id="chead">
+            Messages
+            <svg style="transition-duration:700ms;" id="droparrow2" height="15" viewBox="0 0 51 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L22.1261 28L42 2" stroke="white" stroke-width="5"/>
+            </svg>    
+        </div>
+
+        <div id="messages">
+        </div>
+        <div id="nmsg">
+            <input type="text" id="msginput">
+            <button id="mbtn">Send</button>
+        </div>
+    </div>
+
+</body>
+<script src="script33.js"></script>
+</html>

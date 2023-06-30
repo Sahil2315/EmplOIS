@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Admin</title>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+    <div id="admsearch">
+        <div id="backtonormal">
+            <svg width="15" viewBox="0 0 33 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.7448 2.83641L5.00265 23.2913L31.2531 42.8332" stroke="white" stroke-width="5"/>     
+            </svg>
+        </div> 
+        <input type="text" name="EmpID" id="empsrch" placeholder="Employee ID">
+        <button id="empsbtn">Search</button>
+    </div>
+
+    <div class="admcont">
+        <table id = "adm">
+            <tr class="adminrows" style="font-weight: 800;">
+                <th class="admincols">Employee Id</th>
+                <th class="admincols">Full Name</th>
+                <th class="admincols">Date Of Birth</th>
+                <th class="admincols">Email ID</th>
+                <th class="admincols">Phone Number</th>
+                <th class="admincols">Current Address</th>
+                <th class="admincols">Permanent Address</th>
+                <th class="admincols">Aadhaar Card No.</th>
+                <th class="admincols">UPI ID</th>
+                <th class="admincols">Department</th>
+                <th class="admincols">Job Title</th>
+                <th class="admincols">Joining Date</th>
+                <th class="admincols">Salary</th>
+                <th class="admincols">Regport</th>
+                <th class="admincols">RegKey</th>
+                <th class="admincols">Laptop ID</th>
+                <th class="admincols">Leaves Remaining</th>
+                <th class="admincols">Gender</th>
+                <th class="admincols">Team</th>
+            </tr>
+        </table>
+    </div>
+    
+
+    <div id="navchap">
+        Approve Change Requests
+    </div>
+    <div id="approvch">
+        
+        <div id="chapps">
+            <div id="chapel">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script4.js"></script>
+</html>

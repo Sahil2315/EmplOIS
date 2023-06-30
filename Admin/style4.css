@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+  body,html{
+/*   background-color: rgb(226, 241, 243); */
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.admcont{
+    margin-left: 5vw;
+    margin-top: 10vh;
+    width: 90vw;
+    height: 85vh;
+    overflow: scroll;
+    position: relative;
+    z-index: 1;
+}
+
+hr{
+  width: 70%;
+  background-color: black;
+  height: 3px;
+}
+
+#navchap{
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient( 135deg, rgb(21, 65, 189) 0%, rgb(75, 137, 207) 100%);
+  border-radius: 3px;
+}#navchap:hover{
+  background: linear-gradient( 135deg, rgb(21, 65, 189) 0%, rgb(24, 87, 160) 100%);
+}
+
+#approvch{
+  z-index: 5;
+  position: absolute;
+  overflow-y: scroll;
+  top: 54px;
+  right: 10%;
+  width: 840px;
+  height: 360px;
+  z-index: 4;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(165deg, rgba(62,244,255,0.8) 0%, rgba(93, 75, 255, 0.8) 100%);
+  backdrop-filter: blur(5px);
+  border-radius: 3px;
+  overflow: hidden;
+}#approvch h2{
+  margin-left: 200px;
+  margin-top: 200px;
+}
+#chapps{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 50px);
+  display: flex;
+  flex-direction: row;
+}
+#chapel{
+  position: absolute;
+  width: 90%;
+  top: 8%;
+  left: 50px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#chapel span{
+  margin: 20px;
+}#lftarrow{
+  z-index: 7;
+  position: absolute;
+  top: 45%;
+  left: 70px;
+  padding: 20px 5px;
+  background-color: rgba(0, 255, 255, 0.35);
+  border-radius: 3px
+}#rghtarrow{
+  z-index: 7;
+  position: absolute;
+  top: 45%;
+  right: 50px;
+  padding: 20px 5px;
+  background-color: rgba(0, 255, 255, 0.35);
+  border-radius: 3px
+}#lftarrow:hover, #rghtarrow:hover{
+  background-color: rgba(214, 75, 214, 0.5);
+}#chapprove{
+  position: absolute;
+  left: 40%;
+  bottom: 30px;
+  border: none;
+  padding: 4px 12px ;
+  font-size: 18px;
+  background-color: rgba(35, 16, 141, 0.438);
+  color: white;
+  width: max-content;
+  margin-top: 10px;
+  border-radius: 2px;
+}#chapprove:hover{
+  background-color: rgba(15, 90, 187, 0.438);
+}
+
+.chrows{
+  margin-top: 30px;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  width: 96%;
+}
+.chapbtn{
+  margin-left: 40px;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  background-color: rgba(0, 97, 189, 0.7);
+  color: white;
+  border-radius: 2px;
+  font-size: 18px;
+}.chapbtn:hover{
+  background-color: rgba(0, 0, 202, 0.65);
+}
+
+#admsearch{
+  position: absolute;
+  top: 10px;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+}#admsearch input{
+  margin-right: 20px;
+  font-size: 20px;
+  border-radius: 3px;
+}#admsearch button{
+  font-size: 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 124, 0.6);
+  color: white;
+}#admsearch button:hover{
+  background-color: rgb(79, 79, 255);
+}
+
+#backtonormal{
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 124, 0.6);
+  margin-right: 20px;
+}#backtonormal:hover{
+  background-color: rgb(79, 79, 255);
+}
+
+.newgrid{
+  margin-top: 300px;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 15px;
+}
+.newgriditem{
+  margin: 20px;
+  color: white;
+  padding: 10px;
+  background: linear-gradient(165deg, rgba(0, 81, 85, 0.75) 0%, rgba(8, 0, 85, 0.75) 100%);
+}
+
+#adm{
+    font-size: 1vw;
+    font-weight: 400;
+    border: 5px 5px 5px solid rgb(255, 140, 73);
+}
+
+th {
+    white-space: nowrap;
+    font-weight: 800;
+}
+
+td{
+  white-space: nowrap;
+}
+
+.admincols{
+    height: 2vw;
+    padding: 1vw;
+    background: linear-gradient(165deg, rgba(0, 81, 85, 0.75) 0%, rgba(8, 0, 85, 0.75) 100%);
+    color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #909090;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(92, 64, 51);
+}
