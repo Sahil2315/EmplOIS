@@ -624,7 +624,7 @@ chead.addEventListener('click', () => {
 })
 
 
-const socket = io.connect('http://localhost:5000', { transports : ['websocket'] });
+const socket = io.connect('https://emploi-web-app.onrender.com', { transports : ['websocket'] });
 
 const msginput = document.getElementById('msginput')
 const mbtn = document.getElementById('mbtn')
